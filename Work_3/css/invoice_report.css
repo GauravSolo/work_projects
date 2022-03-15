@@ -1,0 +1,64 @@
+.monthlink{
+    color: rgb(240,143,43);
+    text-decoration: none;
+}
+.monthlink:hover{
+    color: rgb(240,143,43);
+    cursor: pointer;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid rgb(240,143,43);
+}
+
+.table{
+    border-top: 2px solid rgb(240,143,43) !important;
+}
+/* table td + td { border-left:2px solid rgb(240,143,43); } */
+
+
+.attr{
+    background:rgb(240,143,43) !important;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top:10px;
+    color:#fff;
+}
+
+.tab_input{
+    border:1px solid rgb(240,143,43) !important ;
+    border-radius:10px !important;
+    box-shadow: 0px 0px 15px 1px rgba(250,153,53, 0.3) !important;
+    outline:none;
+}
+.label{
+    color: rgb(240,143,43) !important;
+}
+.year.col{
+    border-left: 1px solid !important;
+}
+table th{ border-right:2px solid rgb(240,143,43); }
+
+.monthheading{
+    width: 200px;
+    text-align:center;
+}
+td{
+    text-align: center;
+    white-space: nowrap !important;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.searchbox{
+    border-color: rgb(240,143,43);
+}
+.searchbox:focus{
+    border-color: rgb(240,143,43);
+    box-shadow: 1px 1px 2px rgb(240,143,43), -1px -1px 2px rgb(240,143,43);
+    outline: 0 none;
+}
+.startdate, .enddate{
+    width: 94px;
+}
+.activeLink{
+    border-bottom: 2px solid rgb(240,143,43);
+}
