@@ -62,7 +62,7 @@ checkbox.addEventListener('click',()=>{
           // after fetched customer detail inserting into table
           fetchcustomerdata.innerHTML = `
           <tr>
-          <td class="text-center nowrap pt-3">Gaurav Sharma</td>
+              <td class="text-center nowrap pt-3">Gaurav Sharma</td>
               <td class="text-center pt-3 ">784489433</td>
               <td class="text-center pt-3 nowrap">24-10-1999</td>
               <td class="text-center pt-3 nowrap">12-02-2021</td>
@@ -72,7 +72,7 @@ checkbox.addEventListener('click',()=>{
               <td class="text-center pt-3"> 10-10-2021</td>
               <td class="text-center pt-3 netBal"></td>
               <td class="text-center"><button data-bs-toggle="modal" data-bs-target="#AdjustmentModal" class="btn btn-warning mx-auto text-white d-flex justify-content-center align-items-center"><img style="width:20px;margin-right:5px;" src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-edit-mintab-for-ios-becris-lineal-becris.png"/>Adjustment</button></td>
-            </tr>
+          </tr>
           `;
 
 
