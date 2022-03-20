@@ -50,33 +50,11 @@
                                                                                 <tbody  style="border-color:rgb(240,143,43) !important;" id="ledgerreport">
                                                                                 <tr>
                                                                                     <th  class="label col nowrap">Invoice Count</th>
-                                                                                    <td>20</td>
-                                                                                    <td>33</td>
-                                                                                    <td>12</td>
-                                                                                    <td>40</td>
-                                                                                    <td>20</td>
-                                                                                    <td>22</td>
-                                                                                    <td>23</td>
-                                                                                    <td>54</td>
-                                                                                    <td>34</td>
-                                                                                    <td>10</td>
-                                                                                    <td>08</td>
-                                                                                    <td>30</td>
+                                                                                    <td colspan="12">Fetching Data</td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                         <th  class="label col nowrap">Invoice Amount</th>
-                                                                                        <td>1000</td>
-                                                                                        <td>350</td>
-                                                                                        <td>200</td>
-                                                                                        <td>250</td>
-                                                                                        <td>320</td>
-                                                                                        <td>430</td>
-                                                                                        <td>340</td>
-                                                                                        <td>2300</td>
-                                                                                        <td>433</td>
-                                                                                        <td>222</td>
-                                                                                        <td>120</td>
-                                                                                        <td>900</td>
+                                                                                        <td colspan="12">Loading ...</td>
                                                                                 </tr>
                                                                                 </tbody>
                                                                         </table>  
@@ -92,88 +70,42 @@
                                                                 <div class="table-responsive">
                                                                     <table class="table table-striped " style="width:100%;border:2px solid rgb(240,143,43) !important;border-radius:20px;">
                                                                                 <thead>
-                                                                                <tr>
-                                                                                        <!-- <th scope="col" colspan="2" class="year nowrap text-center col label " style="width:500px;">2022</th>
-                                                                                        <th scope="col" colspan="2" class="year nowrap text-center col label " style="width:500px;">2022</th>
-                                                                                        <th scope="col" colspan="2" class="year nowrap text-center col label " style="width:500px;">2022</th>
-                                                                                        </tr> -->
-                                                                                        <tr>
+                                                                                    <tr>
                                                                                             <th colspan="6" class="p-0">
                                                                                                 <div class="row m-0">
                                                                                                     <div class="col-5 m-0 py-2 text-center " style="color:rgb(240,143,43);">
                                                                                                         <div class="row d-flex align-items-center justify-content-center">
-                                                                                                            <div class="col-5 d-flex align-items-center ">
-                                                                                                                <span class="px-3">From</span> <input type="date"  class="form-control startdate tab_input" id="startdate"/>
+                                                                                                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center ">
+                                                                                                                <div class="row d-flex justify-content-center align-items-center nowrap">
+                                                                                                                    <div class="col my-auto"><span class="">From</span></div>
+                                                                                                                    <div class="col"><input type="date"  class="form-control startdate mx-auto flex-shrink-0 tab_input" id="startdate"/></div>
+                                                                                                                </div>
                                                                                                             </div>
-                                                                                                            <div class="col-5 d-flex align-items-center">
-                                                                                                            <span class="px-3">To</span> <input type="date" class="form-control enddate tab_input" id="enddate"/>
+                                                                                                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                                                                                                <div class="row d-flex justify-content-center align-items-center">
+                                                                                                                        <div class="col my-auto" style="width:62.97px;"><span class="">To</span></div>
+                                                                                                                        <div class="col"><input type="date"  class="form-control enddate mx-auto flex-shrink-0 tab_input"  id="enddate"/></div>
+                                                                                                                    </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
-                                                                                                    <div class="col-2 m-0 py-2 text-center d-flex justify-content-center align-items-center" style="color:rgb(240,143,43);border-left:2px solid rgb(240,143,43);"><button class="btn" style="background-color:rgb(240,143,43);cursor:pointer;color:white;">Submit</button></div>
-                                                                                                    <div class="col-5 m-0 py-2 text-center" style="color:rgb(240,143,43);border-left:2px solid rgb(240,143,43);"><input class="form-control me-2 searchbox" type="search" placeholder="Search User" aria-label="Search"></div>
+                                                                                                    <div class="col-2 m-0 py-2 text-center d-flex justify-content-center align-items-center" style="color:rgb(240,143,43);border-left:2px solid rgb(240,143,43);border-right:2px solid rgb(240,143,43);"><button class="btn submitbtn" style="background-color:rgb(240,143,43);cursor:pointer;color:white;">Submit</button></div>
+                                                                                                    <div class="col-5 m-0 py-2 text-center my-auto" style="color:rgb(240,143,43);"><input class="form-control me-2 searchbox" type="search" placeholder="Search Customer" aria-label="Search"></div>
                                                                                                 </div>
                                                                                             </th>
                                                                                         </tr>
                                                                                         <tr>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:100px;">S.N.</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:500px;">Customer Name</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:500px;">Mobile Number</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:200px;">Customer Name</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:200px;">Mobile Number</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:500px;">Amount</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:500px;">Date</th>
-                                                                                        <th scope="col" class="year  nowrap text-center col label " style="width:500px;">View Invoice</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:100px;">Date <i class="fas fa-caret-down sortdate" style="cursor:pointer;"></i></th>
+                                                                                        <th scope="col" class="year  nowrap text-center col label " style="width:100px;">View Invoice</th>
                                                                                     </tr>
                                                                                     
                                                                             </thead>
                                                                             <tbody class="tablereportbody"  style="border-color:rgb(240,143,43) !important;" id="ledgerreport">
-                                                                            <tr data-id='1'>                                                                            
-                                                                                <td>1</td>
-                                                                                <td class="searchtext" data-id='1'>Gaurav</td>
-                                                                                <td class="searchtext" data-id='1'>48394382</td>
-                                                                                <td>40100</td>
-                                                                                <td>20-12-2020</td>
-                                                                                <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
-                                                                            <tr data-id='2'>
-                                                                                    <td>2</td>
-                                                                                    <td class="searchtext" data-id='2'>Rahul</td>
-                                                                                    <td class="searchtext" data-id='2'>34343433</td>
-                                                                                    <td>34343</td>
-                                                                                    <td>20-20-2020</td>
-                                                                                    <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
-                                                                            <tr data-id='3'>                                                                            
-                                                                                <td>3</td>
-                                                                                <td class="searchtext" data-id='3'>Rakesh</td>
-                                                                                <td class="searchtext" data-id='3'>48394382</td>
-                                                                                <td>40100</td>
-                                                                                <td>20-12-2020</td>
-                                                                                <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
-                                                                            <tr data-id='4'>
-                                                                                    <td>4</td>
-                                                                                    <td class="searchtext" data-id='4'>Harsh</td>
-                                                                                    <td class="searchtext" data-id='4'>34343433</td>
-                                                                                    <td>34343</td>
-                                                                                    <td>20-20-2020</td>
-                                                                                    <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
-                                                                            <tr data-id='5'>                                                                            
-                                                                                <td>5</td>
-                                                                                <td class="searchtext" data-id='5'>Aakash</td>
-                                                                                <td class="searchtext" data-id='5'>48394382</td>
-                                                                                <td>40100</td>
-                                                                                <td>20-12-2020</td>
-                                                                                <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
-                                                                            <tr data-id='6'>
-                                                                                    <td>6</td>
-                                                                                    <td class="searchtext" data-id='6'>Abhi</td>
-                                                                                    <td class="searchtext" data-id='6'>34343433</td>
-                                                                                    <td>34343</td>
-                                                                                    <td>20-20-2020</td>
-                                                                                    <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
-                                                                            </tr>
+                                                                            <tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> Loading... </h4>  </td> <tr>
                                                                             </tbody>
                                                                     </table>
                                                                 </div>                                                              

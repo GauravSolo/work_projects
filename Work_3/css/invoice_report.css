@@ -57,8 +57,37 @@ td{
     outline: 0 none;
 }
 .startdate, .enddate{
-    width: 94px;
+    width: 170px;
 }
 .activeLink{
     border-bottom: 2px solid rgb(240,143,43);
+}
+.longword{
+    display: flex;
+    width: 150px;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    overflow-x: scroll;
+}
+.longtd{
+    height: 60px;
+}
+
+.longword::-webkit-scrollbar-corner {
+  display: none;
+}
+.longword::-webkit-scrollbar,.longword::-webkit-scrollbar {
+  width: 3px;
+  height: 5px;
+}
+
+.longword::-webkit-scrollbar-thumb,.longword::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
+  background-color: grey;
+  opacity: .5;
 }
