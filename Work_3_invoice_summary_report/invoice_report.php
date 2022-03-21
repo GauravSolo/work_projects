@@ -12,7 +12,11 @@
   </head>
   <body>
 
-    <div class="container">
+    <?php
+        include "navbar.php";
+    ?>
+    <section class="home-section">
+    <div class="container-fluid">
         <div class="row  px-3 my-4">
                             <div class="col-12 tab_input ">
                             <!-- style="border-bottom:2px solid rgb(240,143,43);" -->
@@ -95,10 +99,10 @@
                                                                                             </th>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:100px;">S.N.</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:200px;">Customer Name</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:200px;">Mobile Number</th>
-                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:500px;">Amount</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:50px;">S.N.</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:300px;">Customer Name</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:100px;">Mobile Number</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:100px;">Amount</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:100px;">Date <i class="fas fa-caret-down sortdate" style="cursor:pointer;"></i></th>
                                                                                         <th scope="col" class="year  nowrap text-center col label " style="width:100px;">View Invoice</th>
                                                                                     </tr>
@@ -115,6 +119,7 @@
                                               </div>
                           </div>
     </div>
+    </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

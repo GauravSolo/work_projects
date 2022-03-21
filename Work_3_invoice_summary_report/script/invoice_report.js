@@ -260,7 +260,7 @@ function insert_fetch_customer_data(){
                 <td>${i+1}</td>
                 <td class="searchtext longtd" data-id='${(i+1)}'><div class="longword">${res[i][1]['customer_name']}</div></td>
                 <td class="searchtext" data-id='${(i+1)}'>${res[i][1]['customer_number']}</td>
-                <td>${res[i][1]['amount']}</td>
+                <td >${res[i][1]['amount']}6666666666</td>
                 <td>${res[i][1]['date']}</td>
                 <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
                 </tr>`;
