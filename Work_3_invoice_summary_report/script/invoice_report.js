@@ -78,6 +78,7 @@ forwardmonths.addEventListener('click',(e)=>{
 monthlinks.forEach(element => {
     element.addEventListener('click',(e)=>{
         activeLink(e.target);
+        clickonsubmit = 0;
         clickonmonth = 1;
         fetch_transaction_table();
     });
@@ -139,12 +140,14 @@ searchbox.addEventListener('input',(e)=>{
     }
 
 
-    var rows = "<tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> Loading... </h4>  </td> <tr>";
+    var rows = "<tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> Loading... </h4>  </td> <tr>";
     tablebody.innerHTML = rows;
 
 
-    if(startFullDate == '' && endFullDate == '' && clickonmonth == 1)
+    if(clickonmonth == 1)
     {
+        startdate.value = '';
+        enddate.value = '';
         var derivedYear = Number(year.innerText);
     var derivedMonth = Number(document.querySelector('.activeLink').getAttribute('data-month'));
 
@@ -178,13 +181,13 @@ searchbox.addEventListener('input',(e)=>{
             // console.log(response.error, response.res);
             if(response.error === '1')
             {
-                rows = "<tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> Something went wrong--> couldnt fetch data </h4>  </td> <tr>";
+                rows = "<tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> Something went wrong--> couldnt fetch data </h4>  </td> <tr>";
                 tablebody.innerHTML = rows;
             }else if(response.error === '2'){
-                rows = "<tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> No Data </h4>  </td> <tr>";
+                rows = "<tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> No Data </h4>  </td> <tr>";
                 tablebody.innerHTML = rows;
             }else if(response.error === '3'){
-                rows = "<tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> Something went Wrong </h4>  </td> <tr>";
+                rows = "<tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> Something went Wrong </h4>  </td> <tr>";
                 tablebody.innerHTML = rows;
             }else{
               res = response.res;
@@ -260,7 +263,8 @@ function insert_fetch_customer_data(){
                 <td>${i+1}</td>
                 <td class="searchtext longtd" data-id='${(i+1)}'><div class="longword">${res[i][1]['customer_name']}</div></td>
                 <td class="searchtext" data-id='${(i+1)}'>${res[i][1]['customer_number']}</td>
-                <td >${res[i][1]['amount']}6666666666</td>
+                <td >${res[i][1]['invoice_number']}</td>
+                <td >${res[i][1]['amount']}</td>
                 <td>${res[i][1]['date']}</td>
                 <td style="color:rgb(240,143,43);"> <span class="mx-auto" style="cursor:pointer;"> <i class="fas fa-file-alt me-1" style="color:rgb(240,143,43);"></i>View</span> </td>
                 </tr>`;
@@ -271,7 +275,7 @@ function insert_fetch_customer_data(){
       if(flag)
       {
         rows +=`<tr>
-                    <td colspan="6">
+                    <td colspan="7">
                                 <div class="row m-0">
                                     <div class="col-12 nowrap label">Total Sales: <span class=" text-dark">${totalSales}</span></div>
                                 </div>
@@ -302,7 +306,7 @@ function insert_fetch_customer_data(){
         if(flag)
         {
         rows +=`<tr>
-                    <td colspan="6">
+                    <td colspan="7">
                                 <div class="row m-0">
                                     <div class="col-12 nowrap label">Total Sales: <span class=" text-dark">${totalSales}</span></div>
                                 </div>
@@ -314,7 +318,7 @@ function insert_fetch_customer_data(){
     if(rows == "")
     {
 
-      rows = "<tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> No Data </h4>  </td> <tr>";
+      rows = "<tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> No Data </h4>  </td> <tr>";
     }
     tablebody.innerHTML = rows;
     cilckedonsubmit = 0;

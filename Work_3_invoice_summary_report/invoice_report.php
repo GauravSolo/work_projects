@@ -75,7 +75,7 @@
                                                                     <table class="table table-striped " style="width:100%;border:2px solid rgb(240,143,43) !important;border-radius:20px;">
                                                                                 <thead>
                                                                                     <tr>
-                                                                                            <th colspan="6" class="p-0">
+                                                                                            <th colspan="7" class="p-0">
                                                                                                 <div class="row m-0">
                                                                                                     <div class="col-5 m-0 py-2 text-center " style="color:rgb(240,143,43);">
                                                                                                         <div class="row d-flex align-items-center justify-content-center">
@@ -102,6 +102,7 @@
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:50px;">S.N.</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:300px;">Customer Name</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:100px;">Mobile Number</th>
+                                                                                        <th scope="col" class="year nowrap text-center col label " style="width:100px;">Invoice Number</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:100px;">Amount</th>
                                                                                         <th scope="col" class="year nowrap text-center col label " style="width:100px;">Date <i class="fas fa-caret-down sortdate" style="cursor:pointer;"></i></th>
                                                                                         <th scope="col" class="year  nowrap text-center col label " style="width:100px;">View Invoice</th>
@@ -109,7 +110,7 @@
                                                                                     
                                                                             </thead>
                                                                             <tbody class="tablereportbody"  style="border-color:rgb(240,143,43) !important;" id="ledgerreport">
-                                                                            <tr> <td colspan='6'><h4 style='color:rgb(240 143 43);' class='text-center'> Loading... </h4>  </td> <tr>
+                                                                            <tr> <td colspan='7'><h4 style='color:rgb(240 143 43);' class='text-center'> Loading... </h4>  </td> <tr>
                                                                             </tbody>
                                                                     </table>
                                                                 </div>                                                              
