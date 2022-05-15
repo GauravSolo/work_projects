@@ -1,0 +1,126 @@
+.monthlink{
+    color: rgb(240,143,43);
+    text-decoration: none;
+}
+.monthlink:hover{
+    color: rgb(240,143,43);
+    cursor: pointer;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid rgb(240,143,43);
+}
+
+.table{
+    border-top: 2px solid rgb(240,143,43) !important;
+}
+/* table td + td { border-left:2px solid rgb(240,143,43); } */
+
+
+.attr{
+    background:rgb(240,143,43) !important;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top:10px;
+    color:#fff;
+}
+
+.tab_input{
+    border:1px solid rgb(240,143,43) !important ;
+    border-radius:10px !important;
+    box-shadow: 0px 0px 15px 1px rgba(250,153,53, 0.3) !important;
+    outline:none;
+}
+.label{
+    color: rgb(240,143,43) !important;
+}
+.year.col{
+    border-left: 1px solid !important;
+}
+table th{ border-right:2px solid rgb(240,143,43); }
+
+.monthheading{
+    width: 200px;
+    text-align:center;
+}
+td{
+    text-align: center;
+    white-space: nowrap !important;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.searchbox{
+    border-color: rgb(240,143,43) !important;
+}
+.searchbox:focus{
+    border-color: rgb(240,143,43) !important;
+    box-shadow: 1px 1px 2px rgb(240,143,43), -1px -1px 2px rgb(240,143,43) !important;
+    outline: 0 none ;
+}
+.startdate, .enddate{
+    width: 170px;
+}
+.activeLink{
+    border-bottom: 2px solid rgb(240,143,43);
+}
+
+.longword{
+    display: flex;
+    width: 150px;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    overflow-x: scroll;
+}
+.longtd{
+    height: 60px;
+}
+
+.longword::-webkit-scrollbar-corner {
+  display: none;
+}
+.longword::-webkit-scrollbar,.longword::-webkit-scrollbar {
+  width: 3px;
+  height: 5px;
+}
+
+.longword::-webkit-scrollbar-thumb,.longword::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
+  background-color: grey;
+  opacity: .5;
+}
+
+#fir_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#fir_wrapper div.row:nth-child(1){
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+table.dataTable>thead .sorting:before, table.dataTable>thead .sorting:after, table.dataTable>thead .sorting_asc:before, table.dataTable>thead .sorting_asc:after, table.dataTable>thead .sorting_desc:before, table.dataTable>thead .sorting_desc:after, table.dataTable>thead .sorting_asc_disabled:before, table.dataTable>thead .sorting_asc_disabled:after, table.dataTable>thead .sorting_desc_disabled:before, table.dataTable>thead .sorting_desc_disabled:after{
+    /* opacity: 0.8 !important; */
+    font-size: 20px !important;
+}
+
+
+#fir > thead > tr > th:nth-child(8):before,
+#fir > thead > tr > th:nth-child(8):after,#fir > thead > tr > th:nth-child(9):before,
+#fir > thead > tr > th:nth-child(9):after,#sec > thead > tr > th:nth-child(6):before,
+#sec > thead > tr > th:nth-child(6):after {
+    /* content: "" !important; */
+    display: none !important;
+}
+
+
+.dispicon{
+    display:none !important;
+}
+.dispbtn{
+    display: inline !important;
+}
