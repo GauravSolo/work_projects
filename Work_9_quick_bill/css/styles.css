@@ -1,0 +1,411 @@
+/* Google Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-size: 15px;
+}
+/* SIDEBAR CSS*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 82px;
+  background: #fff;
+  padding: 6px 0px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+.sidebar .logo-details {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .logo_name {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .main_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.sidebar.open .logo-details .logo_name {
+  opacity: 1;
+}
+.sidebar .logo-details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding-right: 28px;
+}
+.sidebar.open .logo-details #btn {
+  text-align: right;
+  padding-right: 14px;
+}
+.sidebar i {
+  color: #000;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list {
+  margin-top: 10px;
+  height: 100%;
+}
+.sidebar li {
+  position: relative;
+  margin: 5px 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(44, 9, 9, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-left: 14px;
+}
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip {
+  display: none;
+}
+
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+/*
+.sidebar li:hover {
+  background: beige;
+}*/
+.sidebar li a .links_name {
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  transition: all 0.5s ease;
+  color: #11101d;
+}
+.sidebar li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.home-section {
+  position: relative;
+  background: #fff;
+  min-height: 100vh;
+  top: 0;
+  left: 82px;
+  width: calc(100% - 82px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text {
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
+}
+.submenu span {
+  font-size: 13px !important;
+}
+.bx-chevron-down {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 22px;
+}
+
+#subBusinessInsight,
+#subGrowthEngine,
+#subBrandPromotion,
+#subAppointment,
+#subStaffManagement,
+#subStockManagement,
+#subAdmin,
+#subSubUpdateRecords,
+#subSubStaffRecords,
+#subSubAttendanceTracker {
+  display: none;
+}
+ul {
+  padding: 0;
+}
+.btn {
+  text-transform: none;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+}
+.btn[type="submit"] {
+  margin-top: 0;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* Main content CSS*/
+.home-section {
+  position: relative;
+  background: #fff;
+  min-height: 100vh;
+  top: 0;
+  left: 82px;
+  width: calc(100% - 82px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text {
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+
+.main_content .header {
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  display: flex;
+}
+
+.main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.main_content .info div {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.identifierlabel {
+  padding-top: 0px;
+}
+.reward {
+  align-items: center;
+}
+
+#loyaltyDemo,
+#bypassDemo,
+#remarksDemo {
+  color: #fff;
+  margin-bottom: 0px !important;
+  margin-top: 5px;
+}
+
+.checkLoyalty,
+#bypassDemo {
+  font-size: 12px;
+}
+#bypassDemo {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  color: #999;
+}
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav .btn p {
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  font-weight: 500;
+}
+.close span {
+  font-size: 36px;
+}
+.sendSms,
+.reminder {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.sendSmsText {
+  margin-bottom: 10px;
+}
+#yes {
+  background-color: #28a745;
+  color: white;
+}
+.reminder {
+  padding-bottom: 10px;
+}
+.sidemenuIcon {
+  font-size: 30px;
+}
+input {
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+input[type="date"],
+select {
+  border: none !important;
+  border-bottom: 2px solid #999 !important;
+  border-radius: 0 !important;
+}
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #fff;
+}
+.modal-content {
+  border: 2px solid #999 !important;
+  border-radius: 10px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  div {
+    margin-bottom: 2px !important;
+  }
+  .btn[type="submit"] {
+    margin-top: 2px !important;
+  }
+  #sidebuttons,
+  .sendSms {
+    font-size: 12px !important;
+  }
+}

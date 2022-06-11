@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/mdbootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Loyalty Bill - Quick Bill | Rise Retail</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <div class="logo_name">
+          <img src="assets/mainlogo.png" class="main_logo" />
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <!-- Invoice-->
+        <li>
+          <a href="#">
+            <i class="bx bx-notepad bx-tada-hover"></i>
+            <span class="links_name">Invoice</span>
+          </a>
+          <span class="tooltip">Invoice</span>
+        </li>
+        <!-- Loyalty Bill-->
+        <li>
+          <a href="#">
+            <i class="bx bx-rupee bx-tada-hover"></i>
+            <span class="links_name">Loyalty Bill</span>
+          </a>
+          <span class="tooltip">Loyalty Bill</span>
+        </li>
+
+        <!-- Business Insight-->
+        <li>
+          <a href="#" onclick="subBusinessInsight()">
+            <i class="bx bx-bar-chart-alt bx-tada-hover"></i>
+            <span class="links_name"
+              >Business Insight<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Business Insight</span>
+          <ul id="subBusinessInsight">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Transaction Report</span>
+              </a>
+              <span class="tooltip">Transaction Report</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Itemized Report</span>
+              </a>
+              <span class="tooltip">Itemized Report</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Transactions</span>
+              </a>
+              <span class="tooltip">Update Transactions</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Customer Data</span>
+              </a>
+              <span class="tooltip">Customer Data</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Customer Spends</span>
+              </a>
+              <span class="tooltip">Customer Spends</span>
+            </li>
+          </ul>
+        </li>
+
+        <!--Growth Engine-->
+        <li>
+          <a href="#" onclick="subGrowthEngine()">
+            <i class="bx bx-trending-up bx-tada-hover"></i>
+            <span class="links_name"
+              >Growth Engine <i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Growth Engine</span>
+          <ul id="subGrowthEngine">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Customer Registration</span>
+              </a>
+              <span class="tooltip">Customer Registration</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Lost Customers</span>
+              </a>
+              <span class="tooltip">Lost Customers</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Customer Referrals</span>
+              </a>
+              <span class="tooltip">Customer Referrals</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Enquiry</span>
+              </a>
+              <span class="tooltip">Enquiry</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Loyalty</span>
+              </a>
+              <span class="tooltip">Loyalty</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Reminder Data</span>
+              </a>
+              <span class="tooltip">Reminder Data</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Wishes</span>
+              </a>
+              <span class="tooltip">Wishes</span>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Brand Promotion-->
+        <li>
+          <a href="#" onclick="subBrandPromotion()">
+            <i class="bx bx-broadcast bx-tada-hover"></i>
+            <span class="links_name"
+              >Brand Promotion<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Brand Promotion</span>
+          <ul id="subBrandPromotion">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">SMS Based Promotion</span>
+              </a>
+              <span class="tooltip">SMS Based Promotion</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Email Based Promotion</span>
+              </a>
+              <span class="tooltip">Email Based Promotion</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Reports for promotion</span>
+              </a>
+              <span class="tooltip">Reports for promotion</span>
+            </li>
+          </ul>
+        </li>
+        <!--Appointment-->
+        <li>
+          <a href="#" onclick="subAppointment()">
+            <i class="bx bx-calendar bx-tada-hover"></i>
+            <span class="links_name"
+              >Appointment<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Appointment</span>
+          <ul id="subAppointment">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Appointment Spreadsheet</span>
+              </a>
+              <span class="tooltip">Appointment Spreadsheet</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Make Appointment</span>
+              </a>
+              <span class="tooltip">Make Appointment</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Appointment Reports</span>
+              </a>
+              <span class="tooltip">Appointment Reports</span>
+            </li>
+          </ul>
+        </li>
+
+        <!--Staff Management-->
+        <li>
+          <a href="#" onclick="subStaffManagement()">
+            <i class="bx bx-group bx-tada-hover"></i>
+            <span class="links_name"
+              >Staff Management<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Staff Management</span>
+          <ul id="subStaffManagement">
+            <li class="submenu">
+              <a href="#" onclick="subSubUpdateRecords()">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name"
+                  >Update Records<i class="bx bx-chevron-down"></i
+                ></span>
+              </a>
+              <span class="tooltip">Update Records</span>
+              <ul id="subSubUpdateRecords">
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Update Staff Member</span>
+                  </a>
+                  <span class="tooltip">Update Staff Member</span>
+                </li>
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Update Service</span>
+                  </a>
+                  <span class="tooltip">Update Service</span>
+                </li>
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <div class="column">
+                      <span class="links_name">Update Service</span>
+                      <span class="links_name">Commission</span>
+                    </div>
+                  </a>
+                  <span class="tooltip">Update Service Commission</span>
+                </li>
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Update Service Price</span>
+                  </a>
+                  <span class="tooltip">Update Service Price</span>
+                </li>
+              </ul>
+            </li>
+
+            <li class="submenu">
+              <a href="#" onclick="subSubStaffRecords()">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name"
+                  >Staff Records<i class="bx bx-chevron-down"></i
+                ></span>
+              </a>
+              <span class="tooltip">Staff Records</span>
+              <ul id="subSubStaffRecords">
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Summary Report</span>
+                  </a>
+                  <span class="tooltip">Summary Report</span>
+                </li>
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Detailed Report</span>
+                  </a>
+                  <span class="tooltip">Detailed Report</span>
+                </li>
+              </ul>
+            </li>
+            <li class="submenu">
+              <a href="#" onclick="subSubAttendanceTracker()">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name"
+                  >Attendance Tracker<i class="bx bx-chevron-down"></i
+                ></span>
+              </a>
+              <span class="tooltip">Attendance Tracker</span>
+              <ul id="subSubAttendanceTracker">
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Daily Attendance</span>
+                  </a>
+                  <span class="tooltip">Daily Attendance</span>
+                </li>
+                <li class="submenu">
+                  <a href="#">
+                    <i class="bx bx-chevron-right bx-tada-hover"></i>
+                    <span class="links_name">Report</span>
+                  </a>
+                  <span class="tooltip">Report</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Vendor Management-->
+        <li>
+          <a href="#">
+            <i class="bx bx-store-alt bx-tada-hover"></i>
+            <span class="links_name">Vendor Management</span>
+          </a>
+          <span class="tooltip">Vendor Management</span>
+        </li>
+        <!-- Subscription -->
+        <li>
+          <a href="#">
+            <i class="bx bx-message-square-check bx-tada-hover"></i>
+            <span class="links_name">Subscription</span>
+          </a>
+          <span class="tooltip">Subscription</span>
+        </li>
+        <!-- Stock Management-->
+        <li>
+          <a href="#" onclick="subStockManagement()">
+            <i class="bx bx-package bx-tada-hover"></i>
+            <span class="links_name"
+              >Stock Management<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Stock Management</span>
+          <ul id="subStockManagement">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Stock</span>
+              </a>
+              <span class="tooltip">Update Stock</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Live Stock</span>
+              </a>
+              <span class="tooltip">Live Stock</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Add Multiple Stock</span>
+              </a>
+              <span class="tooltip">Add Multiple Stock</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Stock Change Reports</span>
+              </a>
+              <span class="tooltip">Stock Change Reports</span>
+            </li>
+          </ul>
+        </li>
+        <!-- Expense Management-->
+        <li>
+          <a href="#">
+            <i class="bx bx-wallet bx-tada-hover"></i>
+            <span class="links_name">Expense Management</span>
+          </a>
+          <span class="tooltip">Expense Management</span>
+        </li>
+
+        <!-- ADMIN-->
+        <li>
+          <a href="#" onclick="subAdmin()">
+            <i class="bx bx-user-circle bx-tada-hover"></i>
+            <span class="links_name"
+              >Admin<i class="bx bx-chevron-down"></i
+            ></span>
+          </a>
+          <span class="tooltip">Admin</span>
+          <ul id="subAdmin">
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Profile</span>
+              </a>
+              <span class="tooltip">Profile</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Staff Member</span>
+              </a>
+              <span class="tooltip">Update Staff Member</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Service</span>
+              </a>
+              <span class="tooltip">Update Service</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <div class="column">
+                  <span class="links_name">Update Service</span>
+                  <span class="links_name">Commission</span>
+                </div>
+              </a>
+              <span class="tooltip">Update Service Commission</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Service Price</span>
+              </a>
+              <span class="tooltip">Update Service Price</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Product List</span>
+              </a>
+              <span class="tooltip">Update Product List</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <span class="links_name">Update Product Price</span>
+              </a>
+              <span class="tooltip">Update Product Price</span>
+            </li>
+            <li class="submenu">
+              <a href="#">
+                <i class="bx bx-chevron-right bx-tada-hover"></i>
+                <div class="column">
+                  <span class="links_name">Update Product</span>
+                  <span class="links_name">Commission</span>
+                </div>
+              </a>
+              <span class="tooltip">Update Product Commission</span>
+            </li>
+          </ul>
+        </li>
+        <!-- Customer Care-->
+        <li>
+          <a href="#">
+            <i class="bx bx-help-circle bx-tada-hover"></i>
+            <span class="links_name">Customer Care</span>
+          </a>
+          <span class="tooltip">Customer Care</span>
+        </li>
+        <!-- Log Out -->
+        <li>
+          <a href="#">
+            <i class="bx bx-log-out bx-tada-hover"></i>
+            <span class="links_name">Log Out</span>
+          </a>
+          <span class="tooltip">Log Out</span>
+        </li>
+      </ul>
+    </div>
+    <!-- ------------------------ Main Content of the page--------------- -->
+
+    <section class="home-section">
+      <div class="main_content">
+        <div class="header">
+          <div class="col-md-10">
+            <h3>Loyalty Bill - Quick Bill</h3>
+          </div>
+
+          <div>
+            <span
+              style="font-size: 30px; cursor: pointer"
+              onclick="openNav()"
+              class="sidemenuButton"
+              ><i
+                class="bx bx-grid-alt bx-tada-hover bx-border sidemenuIcon"
+              ></i
+            ></span>
+          </div>
+        </div>
+        <div class="container">
+          <div class="info">
+            <form id="form">
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Mobile Number</label>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    id="mob"
+                    class="form-control"
+                    placeholder="Mobile Number"
+                    onkeydown="validMob()"
+                    required
+                  />
+                  <span id="warning1"></span>
+                </div>
+                <!--
+                <div class="col-md-2">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>-->
+                <div class="col-md-2">
+                  <input
+                    class="form-control"
+                    id="custType"
+                    disabled="yes"
+                    placeholder="Customer Type"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Customer Name</label>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="Name"
+                    onkeydown="validName()"
+                  />
+                  <span id="warning2"></span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Bill Amount</label>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text"
+                        style="
+                          background: #fff;
+                          border: 0px;
+                          border-radius: 0px;
+                          border-bottom: 2px solid #999 !important;
+                        "
+                        >Rs.</span
+                      >
+                    </div>
+                    <input
+                      id="billAmt"
+                      type="number"
+                      min="0"
+                      data-decimal="2"
+                      oninput="enforceNumberValidation(this);netAmt();"
+                      class="form-control"
+                      placeholder="Enter bill amount"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- 
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Loyalty Reward</label>
+                <div class="col-md-4">
+                  <input
+                    id="loyaltyReward"
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter loyalty reward"
+                    oninput="netAmt()"
+                    value=""
+                  />
+                </div>
+              </div>-->
+              <div class="form-group row">
+                <div class="col-md-2">
+                  <button type="button" class="btn btn-primary">
+                    <p id="loyaltyDemo" class="checkLoyalty">
+                      Click to Check Loyalty
+                    </p>
+                  </button>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    id="loyaltyReward"
+                    disabled="yes"
+                    placeholder="Loyalty Reward"
+                  />
+                </div>
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onclick="bypass()"
+                  >
+                    <p id="bypassDemo">Click to bypass</p>
+                  </button>
+                </div>
+              </div>
+
+              <h5>Net Amount: Rs. <span id="NetAmount">0</span></h5>
+              <br />
+
+              <div class="form-check" id="checkForFullPayment">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="checkbox"
+                  onclick="check()"
+                />
+
+                <label class="form-check-label" for="checkForFullPayment">
+                  Click For Full Payment
+                </label>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label">Paid Amount</label>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text"
+                        style="
+                          background: #fff;
+                          border: 0px;
+                          border-radius: 0px;
+                          border-bottom: 2px solid #999 !important;
+                        "
+                        >Rs.</span
+                      >
+                    </div>
+                    <input
+                      id="paidAmt"
+                      type="number"
+                      min="0"
+                      oninput="balance();"
+                      class="form-control"
+                      placeholder="Enter paid amount"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <h5>Balance: Rs. <span id="balAmt">0</span></h5>
+              </div>
+
+              <div class="form-group row payClass">
+                <div class="col-md-6" id="payMode">
+                  <select
+                    class="form-control"
+                    onchange="paymentMode()"
+                    id="selectPayment"
+                  >
+                    <option selected>Select Payment Mode</option>
+                    <option value="cash">Cash</option>
+                    <option value="card">Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div
+                  class="form-group row col-md-4"
+                  id="refNo"
+                  style="display: none"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="txtOther"
+                    placeholder="Reference no."
+                  />
+                </div>
+              </div>
+
+              <!--Add remark-->
+              <div class="form-check" id="checkForRemarks">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="remarksDemo"
+                  onclick="change_text1()"
+                  data-toggle="collapse"
+                  data-target="#remarks"
+                />
+
+                <label class="form-check-label" for="checkForRemarks">
+                  Click to add Remarks
+                </label>
+              </div>
+              <div id="remarks" class="form-group row collapse">
+                <div class="col-md-6">
+                  <textarea
+                    class="form-control"
+                    rows="2"
+                    placeholder="Add your remarks here"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-10">
+                  <button type="submit" class="btn btn-lg btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="fixed-sidebar" id="fixedSidebar">
+          <div class="">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#kycModal"
+              class="btn btn-primary col-md-12"
+            >
+              <p id="sidebuttons" class="kyc">KYC</p>
+            </button>
+          </div>
+          <div class="">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#referralsModal"
+              class="btn btn-primary col-md-12"
+            >
+              <p id="sidebuttons" class="referrals">Referrals</p>
+            </button>
+          </div>
+          <div class="">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#moreModal"
+              class="btn btn-primary col-md-12"
+            >
+              <p id="sidebuttons" class="more">More</p>
+            </button>
+          </div>
+          <div class="">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#subscriptionModal"
+              class="btn btn-primary col-md-12"
+            >
+              <p id="sidebuttons" class="subscription">Subscription</p>
+            </button>
+          </div>
+          <div class="sendSms">
+            <div class="sendSmsText">Send SMS</div>
+            <div class="form-group row">
+              <div class="col-xl-6 col-lg-12">
+                <button
+                  type="button"
+                  id="yes"
+                  class="btn default col-md-12"
+                  onclick="noToYes()"
+                >
+                  YES
+                </button>
+              </div>
+              <div class="col-xl-6 col-lg-12">
+                <button
+                  type="button"
+                  id="no"
+                  class="btn col-md-12"
+                  onclick="yesToNo()"
+                >
+                  NO
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="reminder">
+            <div class="sendSmsText">Reminder</div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input
+                  type="text"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                  class="form-control"
+                  placeholder="Date"
+                />
+              </div>
+              <div>OR</div>
+              <div class="col-md-12">
+                <input
+                  type="number"
+                  min="0"
+                  class="form-control days"
+                  placeholder="Days"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SIDENAV CONTENT MODALS-->
+    <!-- KYC -->
+    <div class="modal fade" id="kycModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscriptionModalTitle">KYC</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-group col-md-6 col-sm-12">
+                <h6>Personal Info</h6>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label">Name</label>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      pattern="[A-Za-z]"
+                      placeholder="Name"
+                      onkeydown="validName()"
+                      disabled
+                    />
+                    <span id="warning2"></span>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="address"
+                    >Address</label
+                  >
+                  <div class="col-md-6">
+                    <textarea
+                      class="form-control"
+                      id="address"
+                      rows="3"
+                      disabled
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label">Gender</label>
+                  <div class="col-md-6">
+                    <select class="form-control" disabled>
+                      <option selected>Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label
+                    class="col-md-4 col-form-label"
+                    for="exampleFormControlInput1"
+                    >DOB</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="dob"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="doa">DOA</label>
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="doa"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="pincode"
+                    >Pincode</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="pincode"
+                      placeholder="Pincode"
+                      min="100000"
+                      max="999999"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="email"
+                    >Email</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email Address"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label">Occupation</label>
+                  <div class="col-md-6">
+                    <select class="form-control" disabled>
+                      <option selected>Choose</option>
+                      <option>Service</option>
+                      <option>Student</option>
+                      <option>Business</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6 col-sm-12 ml-auto">
+                <h6>Purchase Info</h6>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="lastVisit"
+                    >Last Visit</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="lastVisit"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="purchaseAmount"
+                    >Purchase Amount</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Purchase Amount"
+                      name="purchaseAmount"
+                      min="0"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="firstVisit"
+                    >First Visit Date</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="firstVisit"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="visits"
+                    >Total Visits</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Total visits"
+                      name="visits"
+                      min="0"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label" for="totalSpend"
+                    >Total spend</label
+                  >
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Total Spend"
+                      name="totalSpend"
+                      min="0"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <table
+                  class="table table-striped table-bordered table-hover col-md-10"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">Purchase Date</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>23/03/2022</td>
+                      <td>1200</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>10/12/2021</td>
+                      <td>1200</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Referrals -->
+    <div class="modal fade" id="referralsModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscriptionModalTitle">Referrals</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row col-md-12">
+              <div class="form-group row">
+                <label class="col-md-5 col-form-label">Customer Mob No.</label>
+                <div class="col-md-7">
+                  <input
+                    class="form-control"
+                    id="custMob"
+                    disabled="yes"
+                    placeholder="Customer Mob No."
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-5 col-form-label">Referral Type</label>
+                <div class="col-md-7">
+                  <select
+                    class="form-control"
+                    onchange="referralType()"
+                    id="selectReferral"
+                  >
+                    <option selected>Choose type of referral</option>
+                    <option value="justdial">Justdial</option>
+                    <option value="socialmedia">Social Media</option>
+                    <option value="existCust">Existing Customer</option>
+                    <option value="newpromo">New Promo.</option>
+                    <option value="vendor">Vendor</option>
+                    <option value="agent">Agent</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row" style="display: none" id="refMob">
+                <label class="col-md-5 col-form-label"
+                  >Mobile no. of Referrer</label
+                >
+                <div class="col-md-8">
+                  <input
+                    type="text"
+                    id="mob"
+                    class="form-control"
+                    onkeydown="validMob()"
+                    required
+                  />
+                  <span id="warning1"></span>
+                </div>
+              </div>
+              <div class="form-group row" style="display: none" id="refName">
+                <label class="col-md-5 col-form-label">Name of Referrer</label>
+                <div class="col-md-8">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    pattern="[A-Za-z]"
+                    onkeydown="validName()"
+                  />
+                  <span id="warning2"></span>
+                </div>
+              </div>
+              <div class="form-group row" style="display: none" id="refRemarks">
+                <label class="col-md-5 col-form-label" for="remarks"
+                  >Remarks</label
+                >
+                <div class="col-md-8">
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    rows="2"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- More -->
+    <div class="modal fade" id="moreModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscriptionModalTitle">More</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row col-md-12">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">
+                  Optic Info
+                </button>
+                <button type="button" class="btn btn-primary" disabled>
+                  Option 1
+                </button>
+                <button type="button" class="btn btn-primary" disabled>
+                  Option 2
+                </button>
+              </div>
+              <div style="margin-top: 10px; margin-bottom: 10px">
+                <h6>Previous Optic Info</h6>
+              </div>
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="modal" data-target="#horizontalform">
+                    <td>21/02/2022</td>
+                    <td
+                      style="
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                      "
+                    >
+                      Show details
+                    </td>
+                  </tr>
+                  <tr data-toggle="modal" data-target="#horizontalform">
+                    <td>23/03/2022</td>
+                    <td
+                      style="
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                      "
+                    >
+                      Show details
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade ps-0"
+      id="horizontalform"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close text-end me-4 ms-auto d-flex"
+            style="width: 20px; font-size: 45px !important"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true" class="cross">&times;</span>
+          </button>
+          <div class="modal-body mx-3">
+            <div class="mb-5 row">
+              <label for="inputtext" class="col-sm-2 col-form-label"
+                >Types specs/Lens</label
+              >
+              <div class="col-sm-10">
+                <span class="position-relative">
+                  <input
+                    type="text"
+                    class="form-control sph"
+                    maxlength="5"
+                    style="padding-left: 130px"
+                    id="inputtext"
+                    disabled
+                  />
+                  <span class="placetext" style="width: 128px"
+                    >Specs or Lens -</span
+                  >
+                </span>
+              </div>
+            </div>
+
+            <div class="mb-5 row">
+              <label for="inputtext1" class="col-sm-2 col-form-label"
+                >Right Distance</label
+              >
+              <div class="col-sm-10 d-flex">
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext1"
+                    disabled
+                  />
+                  <span class="placetext">SPH -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext1"
+                    disabled
+                  />
+                  <span class="placetext">CYL -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext1"
+                    disabled
+                  />
+                  <span class="placetext">AXIS -</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="mb-5 row">
+              <label for="inputtext2" class="col-sm-2 col-form-label"
+                >Right Addition</label
+              >
+              <div class="col-sm-10 d-flex">
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext2"
+                    disabled
+                  />
+                  <span class="placetext">SPH -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext2"
+                    disabled
+                  />
+                  <span class="placetext">CYL -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext2"
+                    disabled
+                  />
+                  <span class="placetext">AXIS -</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="mb-5 row">
+              <label for="inputtext3" class="col-sm-2 col-form-label"
+                >Left Distance</label
+              >
+              <div class="col-sm-10 d-flex">
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext3"
+                    disabled
+                  />
+                  <span class="placetext">SPH -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext3"
+                    disabled
+                  />
+                  <span class="placetext">CYL -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext3"
+                    disabled
+                  />
+                  <span class="placetext">AXIS -</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="mb-3 mb-sm-5 row">
+              <label for="inputtext4" class="col-sm-2 col-form-label"
+                >Left Addition</label
+              >
+              <div class="col-sm-10 d-flex">
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext4"
+                    disabled
+                  />
+                  <span class="placetext">SPH -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext4"
+                    disabled
+                  />
+                  <span class="placetext">CYL -</span>
+                </span>
+                <span class="position-relative">
+                  <input
+                    type="number"
+                    class="form-control sph"
+                    maxlength="5"
+                    id="inputtext4"
+                    disabled
+                  />
+                  <span class="placetext">AXIS -</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Subscription -->
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscriptionModalTitle">
+              Subscription
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row col-md-12">
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Current Active Package"
+                  disabled
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Valid till"
+                  disabled
+                />
+              </div>
+              <div class="col-md-8" style="margin-top: 10px">
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="2"
+                  placeholder="Details of Subscription"
+                  disabled
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
