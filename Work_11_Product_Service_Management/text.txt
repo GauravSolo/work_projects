@@ -1,0 +1,39 @@
+----1. all number input to have 2 digits after decimal and no negative or special character
+2. Only active list to be displayed
+----3. Change delete button to "Deactivate" once clicked, the Active code should change to '-1'.
+4. Provision to have a button on top of the list to show case inactive cases.
+5. In inactive list each row has provision to get activated
+6. While adding cateogry or sub category, it should consider data exists even if the data is in small or capital letters
+7. Provision to display only Product or Service list
+----8. Can not deactivate a sub category if there is a stock value assigned in stock table
+----9. Reduce the size of edit boxes to display Save button
+----10. Only GST, Price, Commission (Rs.) to be editable and rest to be blocked 
+11. how to do sub category/ category name edit?
+----12. Search box does not show full list
+----13. If we are adding sub category which is in Inactive list then display alert 'Data exists in Inactive list, please activate'
+----14. When we click Add+ button, it becomes 'Hide'. Once clicked on Hide - then only product service button with list is displayed
+15. Uploading product and service list directly ( should be done for either Product or Service to avoid user deciding individual rows to put under product or service 
+16. Put Product service module as first button in Admin and put all the existing relevant buttons under Old Product Service module
+
+
+---Sorting solved
+
+
+4. Provision to have a button on top of the list to show case inactive cases.
+5. In inactive list each row has provision to get activated
+13. If we are adding sub category which is in Inactive list then display alert 'Data exists in Inactive list, please activate'
+
+---8. Can not deactivate a sub category if there is a stock value assigned in stock table
+
+7. Provision to display only Product or Service list
+
+15. Uploading product and service list directly ( should be done for either Product or Service to avoid user deciding individual rows to put under product or 
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3785baa6f3.js" crossorigin="anonymous"></script>
