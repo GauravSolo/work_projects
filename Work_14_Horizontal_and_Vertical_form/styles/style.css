@@ -1,0 +1,35 @@
+.form-control{
+    box-shadow: 2px 2px 5px #efc595
+                ,-2px -2px 5px #efc595;
+}
+.form-control:focus{
+    box-shadow: 2px 2px 5px #ebaf6b
+                ,-2px -2px 5px #ebaf6b;
+}
+label{
+    white-space: nowrap;
+}
+
+.table{
+    empty-cells: show;
+}
+
+.modal-content{
+    border-radius: 10px !important;
+}
+
+.placetext{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 38px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+.sph{
+    padding-left: 45px;
+}
+
